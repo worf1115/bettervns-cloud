@@ -16,21 +16,6 @@ public class AdminServiceApplication {
     }
 
     @Bean
-    public DataSource studentsDataSource(){
-        DriverManagerDataSource datasource = new DriverManagerDataSource();
-        datasource.setDriverClassName("com.mysql.jdbc.Driver");
-        datasource.setUrl("jdbc:mysql://localhost:3306/students?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true");
-        datasource.setUsername("danyil");
-        datasource.setPassword("Grisha_sobaka1");
-        return datasource;
-    }
-
-    @Bean
-    public JdbcTemplate studentsJdbcTemplate(){
-        return new JdbcTemplate(studentsDataSource());
-    }
-
-    @Bean
     public DataSource adminsDataSource(){
         DriverManagerDataSource datasource = new DriverManagerDataSource();
         datasource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -44,5 +29,4 @@ public class AdminServiceApplication {
     public JdbcTemplate adminsJdbcTemplate(){
         return new JdbcTemplate(adminsDataSource());
     }
-
 }
