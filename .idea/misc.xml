@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/bettervns-security/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/admin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/students-service/pom.xml" />
       </list>
     </option>
   </component>
