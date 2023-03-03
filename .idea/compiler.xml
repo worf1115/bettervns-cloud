@@ -2,24 +2,29 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bettervns-security" />
+        <module name="api-gateway" />
         <module name="eureka-client" />
         <module name="eureka-server" />
         <module name="bettervns-cloud" />
-        <module name="admin-api" />
+        <module name="admin-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin-api" target="19" />
       <module name="login-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-api" options="-parameters" />
+      <module name="admin-service" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
       <module name="bettervns-security" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />

@@ -1,7 +1,7 @@
-package com.bettervns.adminapi.controllers;
+package com.bettervns.adminservice.controllers;
 
-import com.bettervns.adminapi.dao.StudentDAO;
-import com.bettervns.adminapi.models.Student;
+import com.bettervns.adminservice.dao.StudentDAO;
+import com.bettervns.adminservice.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

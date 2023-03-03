@@ -1,6 +1,6 @@
-package com.bettervns.adminapi.dao;
+package com.bettervns.adminservice.dao;
 
-import com.bettervns.adminapi.models.Student;
+import com.bettervns.adminservice.models.Student;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -10,6 +10,8 @@ public class StudentMapper implements RowMapper<Student> {
     @Override
     public Student mapRow(ResultSet resultSet, int i) throws SQLException {
         return new Student(resultSet.getInt("id"), resultSet.getString("student_name"),
-                resultSet.getDate("admission_date"), resultSet.getString("email"));
+                resultSet.getString("surname"), resultSet.getString("father_name"),
+                resultSet.getDate("admission_date"), resultSet.getString("email"),
+                resultSet.getInt("group_id"));
     }
 }
