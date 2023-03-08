@@ -31,6 +31,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

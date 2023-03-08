@@ -20,7 +20,7 @@ public class AdminServiceApplication {
 
     public  static void main(String[] args) throws IOException, TimeoutException {
         SpringApplication.run(AdminServiceApplication.class, args);
-        ConnectionFactory factory = new ConnectionFactory();
+        /*ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
         //factory.setPort(15672);
         Connection connection = factory.newConnection();
@@ -34,7 +34,7 @@ public class AdminServiceApplication {
         channel.basicPublish("", QUEUE_NAME,null, message.getBytes("UTF-8"));
         System.out.println("[!] Sent '" + message + "'");
         channel.close();
-        connection.close();
+        connection.close();*/
     }
 
     @Bean

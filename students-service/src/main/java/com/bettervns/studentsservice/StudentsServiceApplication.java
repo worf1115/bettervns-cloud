@@ -1,6 +1,5 @@
 package com.bettervns.studentsservice;
 
-import com.rabbitmq.client.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +17,7 @@ public class StudentsServiceApplication {
 
     public  static void main(String[] args) throws IOException, TimeoutException {
         SpringApplication.run(StudentsServiceApplication.class, args);
-        ConnectionFactory factory = new ConnectionFactory();
+        /*ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
@@ -36,7 +35,7 @@ public class StudentsServiceApplication {
                 System.out.println("[x] Message Recieved' " + message + "'");
             }
         };
-        channel.basicConsume(QUEUE_NAME, true, consumer);
+        channel.basicConsume(QUEUE_NAME, true, consumer);*/
     }
 
     @Bean
@@ -53,5 +52,4 @@ public class StudentsServiceApplication {
     public JdbcTemplate studentsJdbcTemplate(){
         return new JdbcTemplate(studentsDataSource());
     }
-
 }

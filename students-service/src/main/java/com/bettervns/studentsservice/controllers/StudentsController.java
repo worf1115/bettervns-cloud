@@ -14,8 +14,12 @@ import org.springframework.web.server.ResponseStatusException;
 @RequestMapping("/students")
 public class StudentsController {
 
+    private final StudentDAO studentDAO;
+
     @Autowired
-    private StudentDAO studentDAO;
+    public StudentsController(StudentDAO studentDAO) {
+        this.studentDAO = studentDAO;
+    }
 
     @GetMapping()
     public String index(Model model){
