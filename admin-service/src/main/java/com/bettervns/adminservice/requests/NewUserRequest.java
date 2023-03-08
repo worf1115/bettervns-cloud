@@ -1,4 +1,4 @@
-package com.bettervns.studentsservice.requests;
+package com.bettervns.adminservice.requests;
 
 public record NewUserRequest(
         String name,

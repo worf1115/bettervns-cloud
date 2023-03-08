@@ -1,15 +1,15 @@
 package com.bettervns.eurekaserver.rabbitmq;
 
-import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
-import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQCreationConfig {
+
+    public static final String QUEUE_FOR_STUDENTS_NAME = "adminToStudents";
 
     @Bean
     public ConnectionFactory connectionFactory() {
@@ -18,6 +18,6 @@ public class RabbitMQCreationConfig {
 
     @Bean
     public Queue myQueue(){
-        return new Queue("myQueue");
+        return new Queue(QUEUE_FOR_STUDENTS_NAME);
     }
 }
